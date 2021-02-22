@@ -1,4 +1,7 @@
 import 'package:ceremony/screens/Job_details.dart';
+import 'package:ceremony/screens/alerts.dart';
+import 'package:ceremony/screens/chatapphome.dart';
+import 'package:ceremony/screens/chatlist.dart';
 import 'package:ceremony/screens/client.dart';
 import 'package:ceremony/screens/jobs.dart';
 import 'package:ceremony/screens/form_sign_up.dart';
@@ -36,8 +39,11 @@ class _bottom_navState extends State<bottom_nav> {
       // hirer(),
       descrip(),
       job_details(),
-      client(),
-      login(),
+      alerts(),
+      CHATAPPHOME(),
+      // chatlist(),
+      // client(),
+      // login(),
       // onPressed: () {
       //   showSearch(context: context, delegate: searchBar());
       // },
@@ -47,7 +53,8 @@ class _bottom_navState extends State<bottom_nav> {
     ];
 
     return Scaffold(
-      body: scren[_currentIndex],
+      body: Container(child: scren[_currentIndex]),
+      backgroundColor: Colors.scaffoldBack,
       // body: client(),
       bottomNavigationBar: BottomNavigationBar(
         currentIndex: _currentIndex,
@@ -69,15 +76,25 @@ class _bottom_navState extends State<bottom_nav> {
             backgroundColor: Colors.appColor,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.search),
-            label: 'Search',
+            icon: Icon(Icons.notifications),
+            label: 'Alerts',
             backgroundColor: Colors.appColor,
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.search),
+          //   label: 'Search',
+          //   backgroundColor: Colors.appColor,
+          // ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.login),
-            label: 'Login',
+            icon: Icon(Icons.chat_sharp),
+            label: 'Chat',
             backgroundColor: Colors.appColor,
           ),
+          // BottomNavigationBarItem(
+          //   icon: Icon(Icons.login),
+          //   label: 'Login',
+          //   backgroundColor: Colors.appColor,
+          // ),
         ],
         onTap: (index) {
           setState(() {

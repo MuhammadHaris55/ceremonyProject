@@ -28,7 +28,7 @@ BoxDecoration textFeildBoxDeco() {
       ]);
 }
 
-Container ctext_field(String text, String icon) {
+Container text_field(String text, String icon) {
   return Container(
     // padding: EdgeInsets.all(2),
     decoration: textFeildBoxDeco(),

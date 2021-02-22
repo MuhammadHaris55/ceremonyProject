@@ -1,3 +1,5 @@
+import 'package:ceremony/screens/alerts.dart';
+import 'package:ceremony/screens/chatlist.dart';
 import 'package:ceremony/screens/jobs.dart';
 import 'package:flutter/material.dart';
 import 'package:ceremony/screens/login.dart';
@@ -24,8 +26,8 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       // initialRoute: '/client',
       // initialRoute: '/jobdetails',
-      initialRoute: '/bottom_nav',
-      // initialRoute: '/login',
+      // initialRoute: '/bottom_nav',
+      initialRoute: '/login',
       // initialRoute: '/sign',
       routes: {
         '/bottom_nav': (_) => bottom_nav(),
@@ -37,6 +39,8 @@ class _MyAppState extends State<MyApp> {
         '/descrip': (_) => descrip(),
         '/sign': (_) => sign(),
         '/jobdetails': (_) => job_details(),
+        '/alerts': (_) => alerts(),
+        '/chatlist': (_) => chatlist(),
       },
     );
   }

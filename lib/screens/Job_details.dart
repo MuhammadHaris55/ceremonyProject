@@ -27,6 +27,7 @@ class _job_detailsState extends State<job_details> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: appbar('Job details'),
+      backgroundColor: Colors.scaffoldBack,
       body: SingleChildScrollView(
         child: Card(
           margin: EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 0.0),
@@ -180,7 +181,6 @@ class _job_detailsState extends State<job_details> {
                         'add few more please take a look? \n',
                       ),
                     ),
-//YAHA KAAM KAR RHAA HOIUN
                   ],
                 ),
                 RichText(
@@ -212,52 +212,52 @@ class _job_detailsState extends State<job_details> {
                 horizline(),
 // "Hours Needed"  AND  "Duration"
                 Row(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  // crossAxisAlignment: CrossAxisAlignment.start,
+                  // mainAxisAlignment: MainAxisAlignment.end,
+                  // crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     Flexible(
                       flex: 2,
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              hours,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                      // child: Align(
+                      //   alignment: Alignment.centerLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          Text(
+                            hours,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
                             ),
-                            Text(
-                              "Hourly",
-                              style: TextStyle(),
-                            ),
-                          ],
-                        ),
+                          ),
+                          Text(
+                            "Hourly",
+                            style: TextStyle(),
+                          ),
+                        ],
                       ),
                     ),
-                    // SizedBox(width: 20.0),
+                    // ),
+                    SizedBox(width: 10.0),
                     Flexible(
                       flex: 2,
-                      child: Align(
-                        alignment: Alignment.centerLeft,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              duration,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
-                              ),
+                      // child: Align(
+                      //   alignment: Alignment.centerLeft,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: <Widget>[
+                          Text(
+                            duration,
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
                             ),
-                            Text(
-                              "Duration",
-                              style: TextStyle(),
-                            ),
-                          ],
-                        ),
+                          ),
+                          Text(
+                            "Duration",
+                            style: TextStyle(),
+                          ),
+                        ],
                       ),
                     ),
+                    // ),
                   ],
                 ),
                 SizedBox(height: 20.0),
@@ -315,155 +315,174 @@ class _job_detailsState extends State<job_details> {
                 Wrap(
                   children: <Widget>[
 // React
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'React',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('React'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'React',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
+
 // Golang
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'Golang',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('Golang'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'Golang',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
+
 // Node.js
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'Node.js',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('Node.js'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'Node.js',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
+
 // Blockchain
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'Blockchain',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('Blockchain'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'Blockchain',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
+
 // Cryptocurrency
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'Cryptocurrency',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('Cryptocurrency'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'Cryptocurrency',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
+
 // PHP
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'PHP',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('PHP'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'PHP',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
+
 // eCommerce
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'eCommerce',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('eCommerce'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'eCommerce',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
+
 // Travel
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'Travel',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('Travel'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'Travel',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
+
 // Bot Development
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'Bot Development',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('Bot Development'),
+//                     Container(
+//                       margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+//                       padding: EdgeInsets.all(5.0),
+//                       decoration: BoxDecoration(
+//                         borderRadius: BorderRadius.circular(10.0),
+//                         color: Colors.grey[350],
+//                       ),
+//                       child: Text(
+//                         'Bot Development',
+//                         style: TextStyle(
+//                           color: Colors.appColor,
+//                         ),
+//                       ),
+//                     ),
+
 // Python
-                    Container(
-                      margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
-                      padding: EdgeInsets.all(5.0),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10.0),
-                        color: Colors.grey[350],
-                      ),
-                      child: Text(
-                        'Python',
-                        style: TextStyle(
-                          color: Colors.appColor,
-                        ),
-                      ),
-                    ),
+                    skill('Python'),
+                    // Container(
+                    //   margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+                    //   padding: EdgeInsets.all(5.0),
+                    //   decoration: BoxDecoration(
+                    //     borderRadius: BorderRadius.circular(10.0),
+                    //     color: Colors.grey[350],
+                    //   ),
+                    //   child: Text(
+                    //     'Python',
+                    //     style: TextStyle(
+                    //       color: Colors.appColor,
+                    //     ),
+                    //   ),
+                    // ),
                   ],
                 ),
                 horizline(),
@@ -821,6 +840,7 @@ class _job_detailsState extends State<job_details> {
               child: IconButton(
                 color: Colors.grey,
                 icon: Icon(Icons.favorite_outline_sharp),
+                onPressed: () {},
               ),
             ),
           ],
@@ -830,9 +850,26 @@ class _job_detailsState extends State<job_details> {
   }
 }
 
-Divider horizline() {
-  return Divider(
-    color: Colors.appColora,
-    height: 30.0,
+// Divider horizline() {
+//   return Divider(
+//     color: Colors.appColora,
+//     height: 30.0,
+//   );
+// }
+
+Container skill(String skill) {
+  return Container(
+    margin: EdgeInsets.fromLTRB(0.0, 0.0, 5.0, 5.0),
+    padding: EdgeInsets.all(5.0),
+    decoration: BoxDecoration(
+      borderRadius: BorderRadius.circular(10.0),
+      color: Colors.grey[350],
+    ),
+    child: Text(
+      skill,
+      style: TextStyle(
+        color: Colors.appColor,
+      ),
+    ),
   );
 }

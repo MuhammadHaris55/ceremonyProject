@@ -83,6 +83,7 @@ class _descripState extends State<descrip> {
         ],
       ),
       // appbar('Descrip'),
+      backgroundColor: Colors.scaffoldBack,
       body: SingleChildScrollView(
         child: Column(
           // children: infos.map((info) => projectDescription(info)).toList(),
@@ -189,6 +190,7 @@ class _descripState extends State<descrip> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: <Widget>[
                     Container(
+// jobTilte TEXT ROW
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.end,
                         children: [
@@ -204,6 +206,7 @@ class _descripState extends State<descrip> {
                               ),
                             ),
                           ),
+// IconButton 1
                           Flexible(
                             flex: 1,
                             child: IconButton(
@@ -215,6 +218,7 @@ class _descripState extends State<descrip> {
                               onPressed: null,
                             ),
                           ),
+// IconButton 2
                           Flexible(
                             flex: 1,
                             child: IconButton(
@@ -263,36 +267,42 @@ class _descripState extends State<descrip> {
                       // mainAxisAlignment: MainAxisAlignment.start,
                       // crossAxisAlignment: CrossAxisAlignment.start,
                       children: <Widget>[
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              hours,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                        Flexible(
+                          flex: 2,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                hours,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Text(
-                              "Hours Needed",
-                              style: TextStyle(),
-                            ),
-                          ],
+                              Text(
+                                "Hours Needed",
+                                style: TextStyle(),
+                              ),
+                            ],
+                          ),
                         ),
                         SizedBox(width: 20.0),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              duration,
-                              style: TextStyle(
-                                fontWeight: FontWeight.bold,
+                        Flexible(
+                          flex: 2,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                duration,
+                                style: TextStyle(
+                                  fontWeight: FontWeight.bold,
+                                ),
                               ),
-                            ),
-                            Text(
-                              "Duration",
-                              style: TextStyle(),
-                            ),
-                          ],
+                              Text(
+                                "Duration",
+                                style: TextStyle(),
+                              ),
+                            ],
+                          ),
                         ),
                       ],
                     ),
@@ -329,8 +339,8 @@ class _descripState extends State<descrip> {
                     // ],
                     // ),
                     SizedBox(height: 15.0),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
+                    Wrap(
+                      direction: Axis.horizontal,
                       children: <Widget>[
                         RaisedButton(
                           child: Text(

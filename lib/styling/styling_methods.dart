@@ -17,19 +17,27 @@ AppBar appbar(String text) {
         color: Colors.appbar_text,
       ),
     ),
-    actions: <Widget>[
-      IconButton(
-        icon: Icon(Icons.search),
-        onPressed: () {
-          // showSearch(context: context, delegate: searchBar());
-        },
-      ),
-    ],
+    // actions: <Widget>[
+    //   IconButton(
+    //     icon: Icon(Icons.search),
+    //     onPressed: () {
+    //       // showSearch(context: context, delegate: searchBar());
+    //     },
+    //   ),
+    // ],
   );
 }
 
-// , String obscure                            TEXTFIELD
-Container text_field(String text, String icon) {
+//                                           DIVIDER HORIZONTAL LINE DESIGNING
+Divider horizline() {
+  return Divider(
+    color: Colors.appColora,
+    height: 20.0,
+  );
+}
+
+// , String obscure               COPIED TO TEXTSTYLE             TEXTFIELD
+Container ctext_field(String text, String icon) {
   return Container(
     height: 58,
     // padding: EdgeInsets.all(2),
@@ -58,40 +66,42 @@ Container text_field(String text, String icon) {
             // offset: Offset(0, 10),
           ),
         ]),
-    child: Column(
-      children: <Widget>[
-        Container(
-          // padding: EdgeInsets.all(2.0),
-          decoration: BoxDecoration(),
-          child: ListTile(
-            leading: (() {
-              if (icon == 'email') {
-                return Icon(Icons.email);
-              } else if (icon == 'name') {
-                return Icon(Icons.person);
-              } else if (icon == 'password') {
-                return Icon(Icons.security_outlined);
-              }
-            }()),
-            focusColor: Colors.appColor,
-            title: TextField(
-              // obscureText: () => if(obscure == t){},
-              decoration: InputDecoration(
-                focusColor: Colors.appColor,
-                border: InputBorder.none,
-                // border: OutlineInputBorder(),
-                // labelText: text,
-                hintText: text,
-              ),
-            ),
-          ),
+    child:
+        // Column(
+        //   children: <Widget>[
+        //     Container(
+        //       // padding: EdgeInsets.all(2.0),
+        //       decoration: BoxDecoration(),
+        //       child:
+        ListTile(
+      leading: (() {
+        if (icon == 'email') {
+          return Icon(Icons.email);
+        } else if (icon == 'name') {
+          return Icon(Icons.person);
+        } else if (icon == 'password') {
+          return Icon(Icons.security_outlined);
+        }
+      }()),
+      // focusColor: Colors.appColor,
+      title: TextField(
+        // obscureText: () => if(obscure == t){},
+        decoration: InputDecoration(
+          // focusColor: Colors.appColor,
+          border: InputBorder.none,
+          // border: OutlineInputBorder(),
+          // labelText: text,
+          hintText: text,
         ),
-      ],
+      ),
     ),
+    //   ),
+    // ],
+    // ),
   );
 }
 
-//                                           TEXTFIELD DESIGNING METHOD
+//                           PURANA WALA        TEXTFIELD DESIGNING METHOD
 Container otext_field(String text) {
   return Container(
     padding: EdgeInsets.all(8.0),
@@ -155,6 +165,7 @@ class route extends StatelessWidget {
 //                                            BUTTON DESIGNING METHOD
 RaisedButton button(String text, String _user) {
   return RaisedButton(
+    onPressed: () {},
     shape: RoundedRectangleBorder(
       borderRadius: BorderRadius.circular(10.0),
     ),
@@ -295,12 +306,13 @@ Card card(
 //   String dollars = '\$0';
   return Card(
     margin: EdgeInsets.fromLTRB(5.0, 5.0, 5.0, 0.0),
-    color: Colors.grey[200],
+    color: Colors.cardBack,
     child: Padding(
       padding: const EdgeInsets.all(12.0),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: <Widget>[
+// jobTilte TEXT ROW
           Container(
             child: Row(
               mainAxisAlignment: MainAxisAlignment.end,
@@ -318,6 +330,7 @@ Card card(
                     ),
                   ),
                 ),
+// IconButton 1
                 Flexible(
                   flex: 1,
                   child: IconButton(
@@ -329,6 +342,7 @@ Card card(
                     onPressed: null,
                   ),
                 ),
+// IconButton 2
                 Flexible(
                   flex: 1,
                   child: IconButton(
@@ -375,72 +389,68 @@ Card card(
           SizedBox(height: 30.0),
 // "Hours Needed"    "Duration"
           Row(
-            mainAxisAlignment: MainAxisAlignment.end,
+            // mainAxisAlignment: MainAxisAlignment.end,
             // crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               Flexible(
                 flex: 2,
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        hours,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                // child: Align(
+                //   alignment: Alignment.centerLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Text(
+                      hours,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      Text(
-                        "Hours Needed",
-                        style: TextStyle(),
-                      ),
-                    ],
-                  ),
+                    ),
+                    Text(
+                      "Hours Needed",
+                      style: TextStyle(),
+                    ),
+                  ],
                 ),
               ),
-              // SizedBox(width: 20.0),
+              // ),
+              SizedBox(width: 10.0),
               Flexible(
                 flex: 2,
-                child: Align(
-                  alignment: Alignment.centerLeft,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: <Widget>[
-                      Text(
-                        duration,
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
+                // child: Align(
+                //   alignment: Alignment.centerLeft,
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.stretch,
+                  children: <Widget>[
+                    Text(
+                      duration,
+                      style: TextStyle(
+                        fontWeight: FontWeight.bold,
                       ),
-                      Text(
-                        "Duration",
-                        style: TextStyle(),
-                      ),
-                    ],
-                  ),
+                    ),
+                    Text(
+                      "Duration",
+                      style: TextStyle(),
+                    ),
+                  ],
                 ),
               ),
+              // ),
             ],
           ),
           SizedBox(height: 20.0),
 // Experience Level
-          Row(
+          Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Text(
-                    experience,
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
-                  ),
-                  Text(
-                    "Experience Level",
-                    style: TextStyle(),
-                  ),
-                ],
+              Text(
+                experience,
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                "Experience Level",
+                style: TextStyle(),
               ),
             ],
           ),
